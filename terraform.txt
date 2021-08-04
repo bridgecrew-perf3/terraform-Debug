@@ -1,0 +1,1703 @@
+2021-08-04T18:41:28.549+0900 [DEBUG] Adding temp file log sink: C:\Users\dell\AppData\Local\Temp\terraform-log754979667
+2021-08-04T18:41:28.565+0900 [INFO]  Terraform version: 1.0.3
+2021-08-04T18:41:28.565+0900 [INFO]  Go runtime version: go1.16.4
+2021-08-04T18:41:28.565+0900 [INFO]  CLI args: []string{"C:\\Terraform\\terraform.exe", "plan"}
+2021-08-04T18:41:28.571+0900 [DEBUG] Attempting to open CLI config file: C:\Users\dell\AppData\Roaming\terraform.rc
+2021-08-04T18:41:28.572+0900 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021-08-04T18:41:28.572+0900 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021-08-04T18:41:28.573+0900 [DEBUG] ignoring non-existing provider search directory C:\Users\dell\AppData\Roaming\terraform.d\plugins
+2021-08-04T18:41:28.574+0900 [DEBUG] ignoring non-existing provider search directory C:\Users\dell\AppData\Roaming\HashiCorp\Terraform\plugins
+2021-08-04T18:41:28.574+0900 [INFO]  CLI command args: []string{"plan"}
+2021-08-04T18:41:28.576+0900 [DEBUG] New state was assigned lineage "96ee4a23-979a-618d-795f-fa083785b659"
+2021-08-04T18:41:29.065+0900 [DEBUG] checking for provisioner in "."
+2021-08-04T18:41:29.065+0900 [DEBUG] checking for provisioner in "C:\\Terraform"
+2021-08-04T18:41:29.066+0900 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-08-04T18:41:29.066+0900 [INFO]  backend/local: starting Plan operation
+2021-08-04T18:41:29.069+0900 [DEBUG] created provider logger: level=debug
+2021-08-04T18:41:29.069+0900 [INFO]  provider: configuring client automatic mTLS
+2021-08-04T18:41:29.102+0900 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe]
+2021-08-04T18:41:29.442+0900 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe pid=34572
+2021-08-04T18:41:29.442+0900 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe
+2021-08-04T18:41:29.534+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: configuring server automatic mTLS: timestamp=2021-08-04T18:41:29.514+0900
+2021-08-04T18:41:29.570+0900 [DEBUG] provider.terraform-provider-aws_v3.52.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2021-08-04T18:41:29.570+0900
+2021-08-04T18:41:29.570+0900 [DEBUG] provider: using plugin: version=5
+2021-08-04T18:41:29.698+0900 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-08-04T18:41:29.714+0900 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe pid=34572
+2021-08-04T18:41:29.714+0900 [DEBUG] provider: plugin exited
+2021-08-04T18:41:29.714+0900 [INFO]  terraform: building graph: GraphTypeValidate
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_route_table_association.a" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_instance.web-server-instance" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_network_interface.web-server-nic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_internet_gateway.gw" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_security_group.allow_web" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_vpc.prod-vpc" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_route_table.prod-route-table" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_eip.one" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.715+0900 [DEBUG] ProviderTransformer: "aws_subnet.subnet-1" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_subnet.subnet-1" references: [aws_vpc.prod-vpc]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_route_table_association.a" references: [aws_route_table.prod-route-table aws_subnet.subnet-1]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_security_group.allow_web" references: [aws_vpc.prod-vpc]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_route_table.prod-route-table" references: [aws_vpc.prod-vpc aws_internet_gateway.gw aws_internet_gateway.gw]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_eip.one" references: [aws_internet_gateway.gw aws_network_interface.web-server-nic]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_instance.web-server-instance" references: [aws_network_interface.web-server-nic]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_network_interface.web-server-nic" references: [aws_subnet.subnet-1 aws_security_group.allow_web]
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_vpc.prod-vpc" references: []
+2021-08-04T18:41:29.716+0900 [DEBUG] ReferenceTransformer: "aws_internet_gateway.gw" references: [aws_vpc.prod-vpc]
+2021-08-04T18:41:29.717+0900 [DEBUG] Starting graph walk: walkValidate
+2021-08-04T18:41:29.717+0900 [DEBUG] created provider logger: level=debug
+2021-08-04T18:41:29.717+0900 [INFO]  provider: configuring client automatic mTLS
+2021-08-04T18:41:29.747+0900 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe]
+2021-08-04T18:41:29.749+0900 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe pid=21888
+2021-08-04T18:41:29.749+0900 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe
+2021-08-04T18:41:29.820+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: configuring server automatic mTLS: timestamp=2021-08-04T18:41:29.801+0900
+2021-08-04T18:41:29.856+0900 [DEBUG] provider.terraform-provider-aws_v3.52.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2021-08-04T18:41:29.855+0900
+2021-08-04T18:41:29.857+0900 [DEBUG] provider: using plugin: version=5
+2021-08-04T18:41:30.062+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:30.062+0900
+2021-08-04T18:41:30.062+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:30.062+0900
+2021-08-04T18:41:30.062+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:30.062+0900
+2021-08-04T18:41:30.064+0900 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-08-04T18:41:30.083+0900 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe pid=21888
+2021-08-04T18:41:30.083+0900 [DEBUG] provider: plugin exited
+2021-08-04T18:41:30.083+0900 [INFO]  backend/local: plan calling Plan
+2021-08-04T18:41:30.083+0900 [INFO]  terraform: building graph: GraphTypePlan
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_vpc.prod-vpc (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_eip.one (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_security_group.allow_web (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_route_table_association.a (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_route_table.prod-route-table (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_instance.web-server-instance (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_subnet.subnet-1 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_internet_gateway.gw (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.084+0900 [DEBUG] ProviderTransformer: "aws_network_interface.web-server-nic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_route_table_association.a (expand)" references: [aws_subnet.subnet-1 (expand) aws_route_table.prod-route-table (expand)]
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_network_interface.web-server-nic (expand)" references: [aws_subnet.subnet-1 (expand) aws_security_group.allow_web (expand)]
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_route_table.prod-route-table (expand)" references: [aws_vpc.prod-vpc (expand) aws_internet_gateway.gw (expand) aws_internet_gateway.gw (expand)]
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_instance.web-server-instance (expand)" references: [aws_network_interface.web-server-nic (expand)]
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_vpc.prod-vpc (expand)" references: []
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_internet_gateway.gw (expand)" references: [aws_vpc.prod-vpc (expand)]
+2021-08-04T18:41:30.085+0900 [DEBUG] ReferenceTransformer: "aws_eip.one (expand)" references: [aws_internet_gateway.gw (expand) aws_network_interface.web-server-nic (expand)]
+2021-08-04T18:41:30.086+0900 [DEBUG] ReferenceTransformer: "aws_security_group.allow_web (expand)" references: [aws_vpc.prod-vpc (expand)]
+2021-08-04T18:41:30.086+0900 [DEBUG] ReferenceTransformer: "aws_subnet.subnet-1 (expand)" references: [aws_vpc.prod-vpc (expand)]
+2021-08-04T18:41:30.088+0900 [DEBUG] Starting graph walk: walkPlan
+2021-08-04T18:41:30.088+0900 [DEBUG] created provider logger: level=debug
+2021-08-04T18:41:30.088+0900 [INFO]  provider: configuring client automatic mTLS
+2021-08-04T18:41:30.119+0900 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe]
+2021-08-04T18:41:30.121+0900 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe pid=12976
+2021-08-04T18:41:30.121+0900 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe
+2021-08-04T18:41:30.191+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: configuring server automatic mTLS: timestamp=2021-08-04T18:41:30.172+0900
+2021-08-04T18:41:30.227+0900 [DEBUG] provider.terraform-provider-aws_v3.52.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2021-08-04T18:41:30.227+0900
+2021-08-04T18:41:30.227+0900 [DEBUG] provider: using plugin: version=5
+2021-08-04T18:41:30.438+0900 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/aws\"]" changed the config value, but that value is unused
+2021-08-04T18:41:30.438+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [INFO] AWS Auth provider used: "StaticProvider": timestamp=2021-08-04T18:41:30.438+0900
+2021-08-04T18:41:30.439+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] Trying to get account information via sts:GetCallerIdentity: timestamp=2021-08-04T18:41:30.439+0900
+2021-08-04T18:41:30.439+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: sts.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 43
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=8a3e0ea225b964c8d2edb2417890eb8c4962d60c2aec3cb713c16aab42a19181
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=GetCallerIdentity&Version=2011-06-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.439+0900
+2021-08-04T18:41:30.535+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 387
+Content-Type: text/xml
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+X-Amzn-Requestid: acb5b3ec-6502-4ce5-af08-66854a351c77
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.535+0900
+2021-08-04T18:41:30.535+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  <GetCallerIdentityResult>
+    <Arn>arn:aws:iam::740320335608:root</Arn>
+    <UserId>740320335608</UserId>
+    <Account>740320335608</Account>
+  </GetCallerIdentityResult>
+  <ResponseMetadata>
+    <RequestId>acb5b3ec-6502-4ce5-af08-66854a351c77</RequestId>
+  </ResponseMetadata>
+</GetCallerIdentityResponse>: timestamp=2021-08-04T18:41:30.535+0900
+2021-08-04T18:41:30.535+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] Trying to get account information via sts:GetCallerIdentity: timestamp=2021-08-04T18:41:30.535+0900
+2021-08-04T18:41:30.535+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: sts.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 43
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=8a3e0ea225b964c8d2edb2417890eb8c4962d60c2aec3cb713c16aab42a19181
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=GetCallerIdentity&Version=2011-06-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.535+0900
+2021-08-04T18:41:30.596+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 387
+Content-Type: text/xml
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+X-Amzn-Requestid: ace802be-e4ea-4d46-99ce-3f29bd51baa6
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.595+0900
+2021-08-04T18:41:30.596+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  <GetCallerIdentityResult>
+    <Arn>arn:aws:iam::740320335608:root</Arn>
+    <UserId>740320335608</UserId>
+    <Account>740320335608</Account>
+  </GetCallerIdentityResult>
+  <ResponseMetadata>
+    <RequestId>ace802be-e4ea-4d46-99ce-3f29bd51baa6</RequestId>
+  </ResponseMetadata>
+</GetCallerIdentityResponse>: timestamp=2021-08-04T18:41:30.595+0900
+2021-08-04T18:41:30.598+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeAccountAttributes Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 87
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=5701798b960a4cd2f73b066687c08dd519efe615db9b41e27c8db0fa8e4c0c23
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=DescribeAccountAttributes&AttributeName.1=supported-platforms&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.598+0900
+2021-08-04T18:41:30.683+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeAccountAttributes Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 540
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 393cdbff-091f-417c-806a-e248506da9dc
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.683+0900
+2021-08-04T18:41:30.683+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeAccountAttributesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>393cdbff-091f-417c-806a-e248506da9dc</requestId>
+    <accountAttributeSet>
+        <item>
+            <attributeName>supported-platforms</attributeName>
+            <attributeValueSet>
+                <item>
+                    <attributeValue>VPC</attributeValue>
+                </item>
+            </attributeValueSet>
+        </item>
+    </accountAttributeSet>
+</DescribeAccountAttributesResponse>: timestamp=2021-08-04T18:41:30.683+0900
+2021-08-04T18:41:30.683+0900 [DEBUG] ReferenceTransformer: "aws_vpc.prod-vpc" references: []
+2021-08-04T18:41:30.686+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] Waiting for state to become: [success]: timestamp=2021-08-04T18:41:30.686+0900
+2021-08-04T18:41:30.686+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVpcs Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 68
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=509692e81dbba56ce7cd8387d2c02e977dd839605c8d4329ecb498719ece5216
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=DescribeVpcs&Version=2016-11-15&VpcId.1=vpc-021ca8b43aea72509
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.686+0900
+2021-08-04T18:41:30.773+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVpcs Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1146
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 7dbcc9fe-f0b8-4312-8d26-e2f45e682985
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.773+0900
+2021-08-04T18:41:30.773+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeVpcsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>7dbcc9fe-f0b8-4312-8d26-e2f45e682985</requestId>
+    <vpcSet>
+        <item>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <state>available</state>
+            <cidrBlock>10.0.0.0/16</cidrBlock>
+            <cidrBlockAssociationSet>
+                <item>
+                    <cidrBlock>10.0.0.0/16</cidrBlock>
+                    <associationId>vpc-cidr-assoc-02cccdee1b3be9992</associationId>
+                    <cidrBlockState>
+                        <state>associated</state>
+                    </cidrBlockState>
+                </item>
+            </cidrBlockAssociationSet>
+            <dhcpOptionsId>dopt-2700414c</dhcpOptionsId>
+            <tagSet>
+                <item>
+                    <key>Name</key>
+                    <value>production</value>
+                </item>
+            </tagSet>
+            <instanceTenancy>default</instanceTenancy>
+            <isDefault>false</isDefault>
+        </item>
+    </vpcSet>
+</DescribeVpcsResponse>: timestamp=2021-08-04T18:41:30.773+0900
+2021-08-04T18:41:30.773+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVpcAttribute Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 103
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=3ed13283044a627b1c46d04e4f521aee2b966ee4d780e606ed5b2113382968f5
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=DescribeVpcAttribute&Attribute=enableDnsHostnames&Version=2016-11-15&VpcId=vpc-021ca8b43aea72509
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.773+0900
+2021-08-04T18:41:30.866+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVpcAttribute Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 335
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 608b0fc4-7685-4a68-8395-25d1d0d9a916
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.866+0900
+2021-08-04T18:41:30.866+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeVpcAttributeResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>608b0fc4-7685-4a68-8395-25d1d0d9a916</requestId>
+    <vpcId>vpc-021ca8b43aea72509</vpcId>
+    <enableDnsHostnames>
+        <value>false</value>
+    </enableDnsHostnames>
+</DescribeVpcAttributeResponse>: timestamp=2021-08-04T18:41:30.866+0900
+2021-08-04T18:41:30.866+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVpcAttribute Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 101
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=ca43dde6735fca60a6aa7050a90d9cd229ff19e0d43984ae329273467d0dabb3
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=DescribeVpcAttribute&Attribute=enableDnsSupport&Version=2016-11-15&VpcId=vpc-021ca8b43aea72509
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.866+0900
+2021-08-04T18:41:30.953+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVpcAttribute Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 330
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 78deede2-7e0f-49f2-b195-a34091c33ca4
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.952+0900
+2021-08-04T18:41:30.953+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeVpcAttributeResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>78deede2-7e0f-49f2-b195-a34091c33ca4</requestId>
+    <vpcId>vpc-021ca8b43aea72509</vpcId>
+    <enableDnsSupport>
+        <value>true</value>
+    </enableDnsSupport>
+</DescribeVpcAttributeResponse>: timestamp=2021-08-04T18:41:30.952+0900
+2021-08-04T18:41:30.953+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:30 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVpcClassicLink Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 78
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=9273ed72753998089fb356212096a87393219813280bc6d06e52dc0751b0ee22
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094130Z
+Accept-Encoding: gzip
+
+Action=DescribeVpcClassicLink&Version=2016-11-15&VpcId.1=vpc-021ca8b43aea72509
+-----------------------------------------------------: timestamp=2021-08-04T18:41:30.953+0900
+2021-08-04T18:41:31.010+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVpcClassicLink Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 400 Bad Request
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: ae2f3e0f-255f-4fb7-b05f-d84ccba4d163
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.009+0900
+2021-08-04T18:41:31.010+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>UnsupportedOperation</Code><Message>The functionality you requested is not available in this region.</Message></Error></Errors><RequestID>ae2f3e0f-255f-4fb7-b05f-d84ccba4d163</RequestID></Response>: timestamp=2021-08-04T18:41:31.009+0900
+2021-08-04T18:41:31.010+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Validate Response ec2/DescribeVpcClassicLink failed, attempt 0/25, error UnsupportedOperation: The functionality you requested is not available in this region.
+	status code: 400, request id: ae2f3e0f-255f-4fb7-b05f-d84ccba4d163: timestamp=2021-08-04T18:41:31.010+0900
+2021-08-04T18:41:31.010+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] VPC Classic Link is not supported in this region: timestamp=2021-08-04T18:41:31.010+0900
+2021-08-04T18:41:31.012+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVpcClassicLinkDnsSupport Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 89
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=538570f915f32860659cf6479f4745618ccc64f5cd13ee6477a8727f412f0ea8
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeVpcClassicLinkDnsSupport&Version=2016-11-15&VpcIds.1=vpc-021ca8b43aea72509
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.011+0900
+2021-08-04T18:41:31.067+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVpcClassicLinkDnsSupport Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 400 Bad Request
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: 02f139ef-4b3f-4581-b50e-28a170067c49
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.067+0900
+2021-08-04T18:41:31.067+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>UnsupportedOperation</Code><Message>The functionality you requested is not available in this region.</Message></Error></Errors><RequestID>02f139ef-4b3f-4581-b50e-28a170067c49</RequestID></Response>: timestamp=2021-08-04T18:41:31.067+0900
+2021-08-04T18:41:31.067+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Validate Response ec2/DescribeVpcClassicLinkDnsSupport failed, attempt 0/25, error UnsupportedOperation: The functionality you requested is not available in this region.
+	status code: 400, request id: 02f139ef-4b3f-4581-b50e-28a170067c49: timestamp=2021-08-04T18:41:31.067+0900
+2021-08-04T18:41:31.067+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] VPC Classic Link DNS Support is not supported in this region: timestamp=2021-08-04T18:41:31.067+0900
+2021-08-04T18:41:31.067+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeRouteTables Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 158
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=6dfe2bcb452da37e4eae7ed16906350c183abdafe8f2d6337ee5f737816e8f01
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeRouteTables&Filter.1.Name=association.main&Filter.1.Value.1=true&Filter.2.Name=vpc-id&Filter.2.Value.1=vpc-021ca8b43aea72509&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.067+0900
+2021-08-04T18:41:31.145+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeRouteTables Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1253
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: ba26b2fd-6f9a-4764-b827-93c04a43fc03
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.145+0900
+2021-08-04T18:41:31.146+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeRouteTablesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>ba26b2fd-6f9a-4764-b827-93c04a43fc03</requestId>
+    <routeTableSet>
+        <item>
+            <routeTableId>rtb-0780333da67f177e3</routeTableId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <routeSet>
+                <item>
+                    <destinationCidrBlock>10.0.0.0/16</destinationCidrBlock>
+                    <gatewayId>local</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRouteTable</origin>
+                </item>
+            </routeSet>
+            <associationSet>
+                <item>
+                    <routeTableAssociationId>rtbassoc-055550f4b7e39fb29</routeTableAssociationId>
+                    <routeTableId>rtb-0780333da67f177e3</routeTableId>
+                    <main>true</main>
+                    <associationState>
+                        <state>associated</state>
+                    </associationState>
+                </item>
+            </associationSet>
+            <propagatingVgwSet/>
+            <tagSet/>
+        </item>
+    </routeTableSet>
+</DescribeRouteTablesResponse>: timestamp=2021-08-04T18:41:31.145+0900
+2021-08-04T18:41:31.146+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeNetworkAcls Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 149
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=0e54603cdd511b4cd8113bff016428d4c86734aab62c8918ebcb06eab752b7be
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeNetworkAcls&Filter.1.Name=default&Filter.1.Value.1=true&Filter.2.Name=vpc-id&Filter.2.Value.1=vpc-021ca8b43aea72509&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.146+0900
+2021-08-04T18:41:31.237+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeNetworkAcls Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 2034
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 5879a0bf-1a61-45a3-bc10-1dc22c91c73c
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.237+0900
+2021-08-04T18:41:31.237+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeNetworkAclsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>5879a0bf-1a61-45a3-bc10-1dc22c91c73c</requestId>
+    <networkAclSet>
+        <item>
+            <networkAclId>acl-087bd9d4dac05d6ff</networkAclId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <default>true</default>
+            <entrySet>
+                <item>
+                    <ruleNumber>100</ruleNumber>
+                    <protocol>-1</protocol>
+                    <ruleAction>allow</ruleAction>
+                    <egress>true</egress>
+                    <cidrBlock>0.0.0.0/0</cidrBlock>
+                </item>
+                <item>
+                    <ruleNumber>32767</ruleNumber>
+                    <protocol>-1</protocol>
+                    <ruleAction>deny</ruleAction>
+                    <egress>true</egress>
+                    <cidrBlock>0.0.0.0/0</cidrBlock>
+                </item>
+                <item>
+                    <ruleNumber>100</ruleNumber>
+                    <protocol>-1</protocol>
+                    <ruleAction>allow</ruleAction>
+                    <egress>false</egress>
+                    <cidrBlock>0.0.0.0/0</cidrBlock>
+                </item>
+                <item>
+                    <ruleNumber>32767</ruleNumber>
+                    <protocol>-1</protocol>
+                    <ruleAction>deny</ruleAction>
+                    <egress>false</egress>
+                    <cidrBlock>0.0.0.0/0</cidrBlock>
+                </item>
+            </entrySet>
+            <associationSet>
+                <item>
+                    <networkAclAssociationId>aclassoc-022586ece814a12d9</networkAclAssociationId>
+                    <networkAclId>acl-087bd9d4dac05d6ff</networkAclId>
+                    <subnetId>subnet-091b769fc7f2baf44</subnetId>
+                </item>
+            </associationSet>
+            <tagSet/>
+        </item>
+    </networkAclSet>
+</DescribeNetworkAclsResponse>: timestamp=2021-08-04T18:41:31.237+0900
+2021-08-04T18:41:31.237+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeSecurityGroups Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 158
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=097a1dfb64d191a71ac9bfdd35e040215c14d7b7e1c8ee9958a1339437365ea9
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeSecurityGroups&Filter.1.Name=group-name&Filter.1.Value.1=default&Filter.2.Name=vpc-id&Filter.2.Value.1=vpc-021ca8b43aea72509&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.237+0900
+2021-08-04T18:41:31.321+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeSecurityGroups Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1511
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: f447918c-c430-4f61-9af1-703432787515
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.321+0900
+2021-08-04T18:41:31.322+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeSecurityGroupsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>f447918c-c430-4f61-9af1-703432787515</requestId>
+    <securityGroupInfo>
+        <item>
+            <ownerId>740320335608</ownerId>
+            <groupId>sg-0747b2d3364788224</groupId>
+            <groupName>default</groupName>
+            <groupDescription>default VPC security group</groupDescription>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ipPermissions>
+                <item>
+                    <ipProtocol>-1</ipProtocol>
+                    <groups>
+                        <item>
+                            <userId>740320335608</userId>
+                            <groupId>sg-0747b2d3364788224</groupId>
+                        </item>
+                    </groups>
+                    <ipRanges/>
+                    <ipv6Ranges/>
+                    <prefixListIds/>
+                </item>
+            </ipPermissions>
+            <ipPermissionsEgress>
+                <item>
+                    <ipProtocol>-1</ipProtocol>
+                    <groups/>
+                    <ipRanges>
+                        <item>
+                            <cidrIp>0.0.0.0/0</cidrIp>
+                        </item>
+                    </ipRanges>
+                    <ipv6Ranges/>
+                    <prefixListIds/>
+                </item>
+            </ipPermissionsEgress>
+        </item>
+    </securityGroupInfo>
+</DescribeSecurityGroupsResponse>: timestamp=2021-08-04T18:41:31.321+0900
+2021-08-04T18:41:31.322+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeRouteTables Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 158
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=6dfe2bcb452da37e4eae7ed16906350c183abdafe8f2d6337ee5f737816e8f01
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeRouteTables&Filter.1.Name=association.main&Filter.1.Value.1=true&Filter.2.Name=vpc-id&Filter.2.Value.1=vpc-021ca8b43aea72509&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.322+0900
+2021-08-04T18:41:31.400+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeRouteTables Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1253
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 3c02f48e-ac24-438c-ab6b-e32663bc1a3c
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.400+0900
+2021-08-04T18:41:31.401+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeRouteTablesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>3c02f48e-ac24-438c-ab6b-e32663bc1a3c</requestId>
+    <routeTableSet>
+        <item>
+            <routeTableId>rtb-0780333da67f177e3</routeTableId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <routeSet>
+                <item>
+                    <destinationCidrBlock>10.0.0.0/16</destinationCidrBlock>
+                    <gatewayId>local</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRouteTable</origin>
+                </item>
+            </routeSet>
+            <associationSet>
+                <item>
+                    <routeTableAssociationId>rtbassoc-055550f4b7e39fb29</routeTableAssociationId>
+                    <routeTableId>rtb-0780333da67f177e3</routeTableId>
+                    <main>true</main>
+                    <associationState>
+                        <state>associated</state>
+                    </associationState>
+                </item>
+            </associationSet>
+            <propagatingVgwSet/>
+            <tagSet/>
+        </item>
+    </routeTableSet>
+</DescribeRouteTablesResponse>: timestamp=2021-08-04T18:41:31.400+0900
+2021-08-04T18:41:31.404+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.prod-vpc, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+2021-08-04T18:41:31.404+0900 [DEBUG] ReferenceTransformer: "aws_subnet.subnet-1" references: []
+2021-08-04T18:41:31.404+0900 [DEBUG] ReferenceTransformer: "aws_security_group.allow_web" references: []
+2021-08-04T18:41:31.404+0900 [DEBUG] ReferenceTransformer: "aws_internet_gateway.gw" references: []
+2021-08-04T18:41:31.406+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeInternetGateways Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 92
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=f24a3f83aa34c9782b669444c0513d13454289e8ceb79aca9729782914d842e7
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeInternetGateways&InternetGatewayId.1=igw-019a0536d90336520&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.406+0900
+2021-08-04T18:41:31.407+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] Waiting for state to become: [success]: timestamp=2021-08-04T18:41:31.407+0900
+2021-08-04T18:41:31.407+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeSubnets Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 77
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=35ffe4626692c7f760b1075bd1f84bf35032430247c2468a0dbc51f1feda7680
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeSubnets&SubnetId.1=subnet-091b769fc7f2baf44&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.407+0900
+2021-08-04T18:41:31.409+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeSecurityGroups Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 79
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=5064f805ecacad7dcb1ee33b3aa9bdb3c1e694817a70506f1ff61fe8d75c7f64
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeSecurityGroups&GroupId.1=sg-0622dd5baba7979c6&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.409+0900
+2021-08-04T18:41:31.486+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeInternetGateways Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 649
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: fbdefd76-45f1-4435-b04a-b1e89a994e2b
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.486+0900
+2021-08-04T18:41:31.486+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeInternetGatewaysResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>fbdefd76-45f1-4435-b04a-b1e89a994e2b</requestId>
+    <internetGatewaySet>
+        <item>
+            <internetGatewayId>igw-019a0536d90336520</internetGatewayId>
+            <ownerId>740320335608</ownerId>
+            <attachmentSet>
+                <item>
+                    <vpcId>vpc-021ca8b43aea72509</vpcId>
+                    <state>available</state>
+                </item>
+            </attachmentSet>
+            <tagSet/>
+        </item>
+    </internetGatewaySet>
+</DescribeInternetGatewaysResponse>: timestamp=2021-08-04T18:41:31.486+0900
+2021-08-04T18:41:31.488+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_internet_gateway.gw, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2021-08-04T18:41:31.488+0900 [DEBUG] ReferenceTransformer: "aws_route_table.prod-route-table" references: []
+2021-08-04T18:41:31.491+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeRouteTables Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 82
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=17ec392047d6b67ee7b919338f8ab4100741f651a3aecc135dfc1b2aea9d960a
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeRouteTables&RouteTableId.1=rtb-0934ef2aba3f0331c&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.491+0900
+2021-08-04T18:41:31.491+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeSubnets Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1281
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 15ad9a38-92e2-4d0d-b356-eccd7dcf4dc2
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.491+0900
+2021-08-04T18:41:31.491+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeSubnetsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>15ad9a38-92e2-4d0d-b356-eccd7dcf4dc2</requestId>
+    <subnetSet>
+        <item>
+            <subnetId>subnet-091b769fc7f2baf44</subnetId>
+            <subnetArn>arn:aws:ec2:ap-northeast-2:740320335608:subnet/subnet-091b769fc7f2baf44</subnetArn>
+            <state>available</state>
+            <ownerId>740320335608</ownerId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <cidrBlock>10.0.1.0/24</cidrBlock>
+            <ipv6CidrBlockAssociationSet/>
+            <availableIpAddressCount>250</availableIpAddressCount>
+            <availabilityZone>ap-northeast-2a</availabilityZone>
+            <availabilityZoneId>apne2-az1</availabilityZoneId>
+            <defaultForAz>false</defaultForAz>
+            <mapPublicIpOnLaunch>false</mapPublicIpOnLaunch>
+            <tagSet>
+                <item>
+                    <key>Name</key>
+                    <value>prod-subnet</value>
+                </item>
+            </tagSet>
+            <assignIpv6AddressOnCreation>false</assignIpv6AddressOnCreation>
+            <mapCustomerOwnedIpOnLaunch>false</mapCustomerOwnedIpOnLaunch>
+        </item>
+    </subnetSet>
+</DescribeSubnetsResponse>: timestamp=2021-08-04T18:41:31.491+0900
+2021-08-04T18:41:31.494+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.subnet-1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+2021-08-04T18:41:31.496+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeSecurityGroups Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:30 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: c27c10af-812e-43d8-bafe-a1b9e4e4d0ba
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.496+0900
+2021-08-04T18:41:31.496+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeSecurityGroupsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>c27c10af-812e-43d8-bafe-a1b9e4e4d0ba</requestId>
+    <securityGroupInfo>
+        <item>
+            <ownerId>740320335608</ownerId>
+            <groupId>sg-0622dd5baba7979c6</groupId>
+            <groupName>allow_web_traffic</groupName>
+            <groupDescription>Allow Web inbound traffic</groupDescription>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ipPermissions>
+                <item>
+                    <ipProtocol>tcp</ipProtocol>
+                    <fromPort>80</fromPort>
+                    <toPort>80</toPort>
+                    <groups/>
+                    <ipRanges>
+                        <item>
+                            <cidrIp>0.0.0.0/0</cidrIp>
+                            <description>HTTP</description>
+                        </item>
+                    </ipRanges>
+                    <ipv6Ranges/>
+                    <prefixListIds/>
+                </item>
+                <item>
+                    <ipProtocol>tcp</ipProtocol>
+                    <fromPort>22</fromPort>
+                    <toPort>22</toPort>
+                    <groups/>
+                    <ipRanges>
+                        <item>
+                            <cidrIp>0.0.0.0/0</cidrIp>
+                            <description>SSH</description>
+                        </item>
+                    </ipRanges>
+                    <ipv6Ranges/>
+                    <prefixListIds/>
+                </item>
+                <item>
+                    <ipProtocol>tcp</ipProtocol>
+                    <fromPort>443</fromPort>
+                    <toPort>443</toPort>
+                    <groups/>
+                    <ipRanges>
+                        <item>
+                            <cidrIp>0.0.0.0/0</cidrIp>
+                            <description>HTTPS</description>
+                        </item>
+                    </ipRanges>
+                    <ipv6Ranges>
+                        <item>
+                            <cidrIpv6>::/0</cidrIpv6>
+                            <description>HTTPS</description>
+                        </item>
+                    </ipv6Ranges>
+                    <prefixListIds/>
+                </item>
+            </ipPermissions>
+            <ipPermissionsEgress>
+                <item>
+                    <ipProtocol>-1</ipProtocol>
+                    <groups/>
+                    <ipRanges>
+                        <item>
+                            <cidrIp>0.0.0.0/0</cidrIp>
+                        </item>
+                    </ipRanges>
+                    <ipv6Ranges/>
+                    <prefixListIds/>
+                </item>
+            </ipPermissionsEgress>
+            <tagSet>
+                <item>
+                    <key>Name</key>
+                    <value>allow_web</value>
+                </item>
+            </tagSet>
+        </item>
+    </securityGroupInfo>
+</DescribeSecurityGroupsResponse>: timestamp=2021-08-04T18:41:31.496+0900
+2021-08-04T18:41:31.502+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:31.502+0900
+2021-08-04T18:41:31.502+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:31.502+0900
+2021-08-04T18:41:31.506+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.allow_web, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2021-08-04T18:41:31.507+0900 [DEBUG] ReferenceTransformer: "aws_network_interface.web-server-nic" references: []
+2021-08-04T18:41:31.511+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeNetworkInterfaces Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 94
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=f8cfbd219f885f92f40aa57315a9beb26cce6c491d8e3ba9f54367bc390eaa7c
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeNetworkInterfaces&NetworkInterfaceId.1=eni-071eadf0ddeac4d08&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.510+0900
+2021-08-04T18:41:31.573+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeRouteTables Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 2023
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 55306868-e1de-4b0b-b4f2-78bddd464176
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.573+0900
+2021-08-04T18:41:31.573+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeRouteTablesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>55306868-e1de-4b0b-b4f2-78bddd464176</requestId>
+    <routeTableSet>
+        <item>
+            <routeTableId>rtb-0934ef2aba3f0331c</routeTableId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <routeSet>
+                <item>
+                    <destinationCidrBlock>10.0.0.0/16</destinationCidrBlock>
+                    <gatewayId>local</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRouteTable</origin>
+                </item>
+                <item>
+                    <destinationCidrBlock>0.0.0.0/0</destinationCidrBlock>
+                    <gatewayId>igw-019a0536d90336520</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRoute</origin>
+                </item>
+                <item>
+                    <destinationIpv6CidrBlock>::/0</destinationIpv6CidrBlock>
+                    <gatewayId>igw-019a0536d90336520</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRoute</origin>
+                </item>
+            </routeSet>
+            <associationSet>
+                <item>
+                    <routeTableAssociationId>rtbassoc-0750fbd843c6d89ed</routeTableAssociationId>
+                    <routeTableId>rtb-0934ef2aba3f0331c</routeTableId>
+                    <subnetId>subnet-091b769fc7f2baf44</subnetId>
+                    <main>false</main>
+                    <associationState>
+                        <state>associated</state>
+                    </associationState>
+                </item>
+            </associationSet>
+            <propagatingVgwSet/>
+            <tagSet>
+                <item>
+                    <key>Name</key>
+                    <value>Prod</value>
+                </item>
+            </tagSet>
+        </item>
+    </routeTableSet>
+</DescribeRouteTablesResponse>: timestamp=2021-08-04T18:41:31.573+0900
+2021-08-04T18:41:31.576+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:31.575+0900
+2021-08-04T18:41:31.579+0900 [DEBUG] ReferenceTransformer: "aws_route_table_association.a" references: []
+2021-08-04T18:41:31.581+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeRouteTables Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 142
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=8680cd944152d06dcfefbc6846efba25d4b8b928669e2cd20bbee9a2090cbd96
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeRouteTables&Filter.1.Name=association.route-table-association-id&Filter.1.Value.1=rtbassoc-0750fbd843c6d89ed&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.580+0900
+2021-08-04T18:41:31.602+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeNetworkInterfaces Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: c93d698d-cd34-4723-a663-eb68e8e82231
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.602+0900
+2021-08-04T18:41:31.602+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeNetworkInterfacesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>c93d698d-cd34-4723-a663-eb68e8e82231</requestId>
+    <networkInterfaceSet>
+        <item>
+            <networkInterfaceId>eni-071eadf0ddeac4d08</networkInterfaceId>
+            <subnetId>subnet-091b769fc7f2baf44</subnetId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <availabilityZone>ap-northeast-2a</availabilityZone>
+            <description/>
+            <ownerId>740320335608</ownerId>
+            <requesterManaged>false</requesterManaged>
+            <status>in-use</status>
+            <macAddress>02:be:42:68:cd:26</macAddress>
+            <privateIpAddress>10.0.1.50</privateIpAddress>
+            <sourceDestCheck>true</sourceDestCheck>
+            <groupSet>
+                <item>
+                    <groupId>sg-0622dd5baba7979c6</groupId>
+                    <groupName>allow_web_traffic</groupName>
+                </item>
+            </groupSet>
+            <attachment>
+                <attachmentId>eni-attach-09572479df2299219</attachmentId>
+                <instanceId>i-00a078d6f615df895</instanceId>
+                <instanceOwnerId>740320335608</instanceOwnerId>
+                <deviceIndex>0</deviceIndex>
+                <networkCardIndex>0</networkCardIndex>
+                <status>attached</status>
+                <attachTime>2021-08-04T06:15:20.000Z</attachTime>
+                <deleteOnTermination>false</deleteOnTermination>
+            </attachment>
+            <association>
+                <publicIp>3.38.53.183</publicIp>
+                <publicDnsName/>
+                <ipOwnerId>740320335608</ipOwnerId>
+                <allocationId>eipalloc-0be235c49cc4cd8b4</allocationId>
+                <associationId>eipassoc-0c3c84dd7fb2157a5</associationId>
+                <natEnabled>true</natEnabled>
+            </association>
+            <tagSet/>
+            <privateIpAddressesSet>
+                <item>
+                    <privateIpAddress>10.0.1.50</privateIpAddress>
+                    <primary>true</primary>
+                    <association>
+                        <publicIp>3.38.53.183</publicIp>
+                        <publicDnsName/>
+                        <ipOwnerId>740320335608</ipOwnerId>
+                        <allocationId>eipalloc-0be235c49cc4cd8b4</allocationId>
+                        <associationId>eipassoc-0c3c84dd7fb2157a5</associationId>
+                        <natEnabled>true</natEnabled>
+                    </association>
+                </item>
+            </privateIpAddressesSet>
+            <ipv6AddressesSet/>
+            <interfaceType>interface</interfaceType>
+        </item>
+    </networkInterfaceSet>
+</DescribeNetworkInterfacesResponse>: timestamp=2021-08-04T18:41:31.602+0900
+2021-08-04T18:41:31.604+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:31.603+0900
+2021-08-04T18:41:31.604+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:31.603+0900
+2021-08-04T18:41:31.605+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_network_interface.web-server-nic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .description: planned value cty.StringVal("") for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+2021-08-04T18:41:31.606+0900 [DEBUG] ReferenceTransformer: "aws_instance.web-server-instance" references: []
+2021-08-04T18:41:31.606+0900 [INFO]  ReferenceTransformer: reference not found: "aws_internet_gateway.gw"
+2021-08-04T18:41:31.606+0900 [DEBUG] ReferenceTransformer: "aws_eip.one" references: []
+2021-08-04T18:41:31.609+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] EIP describe configuration: {
+  AllocationIds: ["eipalloc-0be235c49cc4cd8b4"]
+} (domain: vpc): timestamp=2021-08-04T18:41:31.609+0900
+2021-08-04T18:41:31.609+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeAddresses Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 85
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=2a69d4d7f5f3919d757a8c804a7077c93fd5403dc945191765ac92db784d913e
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeAddresses&AllocationId.1=eipalloc-0be235c49cc4cd8b4&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.609+0900
+2021-08-04T18:41:31.613+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeInstances Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 76
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=3f3cd16e5f7517f27bdf4d7caab5759fc8b263d9189c7a4f521cf277355713f1
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeInstances&InstanceId.1=i-00a078d6f615df895&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.613+0900
+2021-08-04T18:41:31.659+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeRouteTables Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 2023
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 85911354-05d2-436f-9d6c-52b59f2742a4
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.659+0900
+2021-08-04T18:41:31.659+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeRouteTablesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>85911354-05d2-436f-9d6c-52b59f2742a4</requestId>
+    <routeTableSet>
+        <item>
+            <routeTableId>rtb-0934ef2aba3f0331c</routeTableId>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <routeSet>
+                <item>
+                    <destinationCidrBlock>10.0.0.0/16</destinationCidrBlock>
+                    <gatewayId>local</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRouteTable</origin>
+                </item>
+                <item>
+                    <destinationCidrBlock>0.0.0.0/0</destinationCidrBlock>
+                    <gatewayId>igw-019a0536d90336520</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRoute</origin>
+                </item>
+                <item>
+                    <destinationIpv6CidrBlock>::/0</destinationIpv6CidrBlock>
+                    <gatewayId>igw-019a0536d90336520</gatewayId>
+                    <state>active</state>
+                    <origin>CreateRoute</origin>
+                </item>
+            </routeSet>
+            <associationSet>
+                <item>
+                    <routeTableAssociationId>rtbassoc-0750fbd843c6d89ed</routeTableAssociationId>
+                    <routeTableId>rtb-0934ef2aba3f0331c</routeTableId>
+                    <subnetId>subnet-091b769fc7f2baf44</subnetId>
+                    <main>false</main>
+                    <associationState>
+                        <state>associated</state>
+                    </associationState>
+                </item>
+            </associationSet>
+            <propagatingVgwSet/>
+            <tagSet>
+                <item>
+                    <key>Name</key>
+                    <value>Prod</value>
+                </item>
+            </tagSet>
+        </item>
+    </routeTableSet>
+</DescribeRouteTablesResponse>: timestamp=2021-08-04T18:41:31.659+0900
+2021-08-04T18:41:31.660+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route_table_association.a, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .gateway_id: planned value cty.StringVal("") for a non-computed attribute
+2021-08-04T18:41:31.697+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeInstances Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: 834e66bb-4178-4eb6-b978-adc7cdb4e578
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.697+0900
+2021-08-04T18:41:31.698+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>834e66bb-4178-4eb6-b978-adc7cdb4e578</requestId>
+    <reservationSet>
+        <item>
+            <reservationId>r-050658183815da76e</reservationId>
+            <ownerId>740320335608</ownerId>
+            <groupSet/>
+            <instancesSet>
+                <item>
+                    <instanceId>i-00a078d6f615df895</instanceId>
+                    <imageId>ami-0ba5cd124d7a79612</imageId>
+                    <instanceState>
+                        <code>16</code>
+                        <name>running</name>
+                    </instanceState>
+                    <privateDnsName>ip-10-0-1-50.ap-northeast-2.compute.internal</privateDnsName>
+                    <dnsName/>
+                    <reason/>
+                    <keyName>main-key</keyName>
+                    <amiLaunchIndex>0</amiLaunchIndex>
+                    <productCodes/>
+                    <instanceType>t2.micro</instanceType>
+                    <launchTime>2021-08-04T06:15:20.000Z</launchTime>
+                    <placement>
+                        <availabilityZone>ap-northeast-2a</availabilityZone>
+                        <groupName/>
+                        <tenancy>default</tenancy>
+                    </placement>
+                    <monitoring>
+                        <state>disabled</state>
+                    </monitoring>
+                    <subnetId>subnet-091b769fc7f2baf44</subnetId>
+                    <vpcId>vpc-021ca8b43aea72509</vpcId>
+                    <privateIpAddress>10.0.1.50</privateIpAddress>
+                    <ipAddress>3.38.53.183</ipAddress>
+                    <sourceDestCheck>true</sourceDestCheck>
+                    <groupSet>
+                        <item>
+                            <groupId>sg-0622dd5baba7979c6</groupId>
+                            <groupName>allow_web_traffic</groupName>
+                        </item>
+                    </groupSet>
+                    <architecture>x86_64</architecture>
+                    <rootDeviceType>ebs</rootDeviceType>
+                    <rootDeviceName>/dev/sda1</rootDeviceName>
+                    <blockDeviceMapping>
+                        <item>
+                            <deviceName>/dev/sda1</deviceName>
+                            <ebs>
+                                <volumeId>vol-023f162babb96674e</volumeId>
+                                <status>attached</status>
+                                <attachTime>2021-08-04T06:15:21.000Z</attachTime>
+                                <deleteOnTermination>true</deleteOnTermination>
+                            </ebs>
+                        </item>
+                    </blockDeviceMapping>
+                    <virtualizationType>hvm</virtualizationType>
+                    <clientToken>55BB3660-CFE6-46A0-B94E-56A5CF67432F</clientToken>
+                    <tagSet>
+                        <item>
+                            <key>Name</key>
+                            <value>web-server</value>
+                        </item>
+                    </tagSet>
+                    <hypervisor>xen</hypervisor>
+                    <networkInterfaceSet>
+                        <item>
+                            <networkInterfaceId>eni-071eadf0ddeac4d08</networkInterfaceId>
+                            <subnetId>subnet-091b769fc7f2baf44</subnetId>
+                            <vpcId>vpc-021ca8b43aea72509</vpcId>
+                            <description/>
+                            <ownerId>740320335608</ownerId>
+                            <status>in-use</status>
+                            <macAddress>02:be:42:68:cd:26</macAddress>
+                            <privateIpAddress>10.0.1.50</privateIpAddress>
+                            <sourceDestCheck>true</sourceDestCheck>
+                            <groupSet>
+                                <item>
+                                    <groupId>sg-0622dd5baba7979c6</groupId>
+                                    <groupName>allow_web_traffic</groupName>
+                                </item>
+                            </groupSet>
+                            <attachment>
+                                <attachmentId>eni-attach-09572479df2299219</attachmentId>
+                                <deviceIndex>0</deviceIndex>
+                                <status>attached</status>
+                                <attachTime>2021-08-04T06:15:20.000Z</attachTime>
+                                <deleteOnTermination>false</deleteOnTermination>
+                                <networkCardIndex>0</networkCardIndex>
+                            </attachment>
+                            <association>
+                                <publicIp>3.38.53.183</publicIp>
+                                <publicDnsName/>
+                                <ipOwnerId>740320335608</ipOwnerId>
+                            </association>
+                            <privateIpAddressesSet>
+                                <item>
+                                    <privateIpAddress>10.0.1.50</privateIpAddress>
+                                    <primary>true</primary>
+                                    <association>
+                                    <publicIp>3.38.53.183</publicIp>
+                                    <publicDnsName/>
+                                    <ipOwnerId>740320335608</ipOwnerId>
+                                    </association>
+                                </item>
+                            </privateIpAddressesSet>
+                            <ipv6AddressesSet/>
+                            <interfaceType>interface</interfaceType>
+                        </item>
+                    </networkInterfaceSet>
+                    <ebsOptimized>false</ebsOptimized>
+                    <enaSupport>true</enaSupport>
+                    <cpuOptions>
+                        <coreCount>1</coreCount>
+                        <threadsPerCore>1</threadsPerCore>
+                    </cpuOptions>
+                    <capacityReservationSpecification>
+                        <capacityReservationPreference>open</capacityReservationPreference>
+                    </capacityReservationSpecification>
+                    <hibernationOptions>
+                        <configured>false</configured>
+                    </hibernationOptions>
+                    <enclaveOptions>
+                        <enabled>false</enabled>
+                    </enclaveOptions>
+                    <metadataOptions>
+                        <state>applied</state>
+                        <httpTokens>optional</httpTokens>
+                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>
+                        <httpEndpoint>enabled</httpEndpoint>
+                    </metadataOptions>
+                    <privateDnsNameOptions/>
+                </item>
+            </instancesSet>
+        </item>
+    </reservationSet>
+</DescribeInstancesResponse>: timestamp=2021-08-04T18:41:31.697+0900
+2021-08-04T18:41:31.698+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeTags Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 165
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=44ae173adb5a12717d5f01c269ca6631baf87e517fb0ad2ddde25cff3d178be2
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeTags&Filter.1.Name=resource-id&Filter.1.Value.1=i-00a078d6f615df895&Filter.2.Name=key&Filter.2.Value.1=aws%3Aec2launchtemplate%3Aid&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.698+0900
+2021-08-04T18:41:31.776+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeAddresses Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 881
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:32 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 214169f6-8579-4348-85f9-f71ceed2cbec
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.776+0900
+2021-08-04T18:41:31.776+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeAddressesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>214169f6-8579-4348-85f9-f71ceed2cbec</requestId>
+    <addressesSet>
+        <item>
+            <publicIp>3.38.53.183</publicIp>
+            <allocationId>eipalloc-0be235c49cc4cd8b4</allocationId>
+            <domain>vpc</domain>
+            <instanceId>i-00a078d6f615df895</instanceId>
+            <associationId>eipassoc-0c3c84dd7fb2157a5</associationId>
+            <networkInterfaceId>eni-071eadf0ddeac4d08</networkInterfaceId>
+            <networkInterfaceOwnerId>740320335608</networkInterfaceOwnerId>
+            <privateIpAddress>10.0.1.50</privateIpAddress>
+            <publicIpv4Pool>amazon</publicIpv4Pool>
+            <networkBorderGroup>ap-northeast-2</networkBorderGroup>
+        </item>
+    </addressesSet>
+</DescribeAddressesResponse>: timestamp=2021-08-04T18:41:31.776+0900
+2021-08-04T18:41:31.780+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_eip.one, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2021-08-04T18:41:31.796+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeTags Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 212
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: b9a2cfa5-864a-4bc5-b0d2-d33657473499
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.796+0900
+2021-08-04T18:41:31.796+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeTagsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>b9a2cfa5-864a-4bc5-b0d2-d33657473499</requestId>
+    <tagSet/>
+</DescribeTagsResponse>: timestamp=2021-08-04T18:41:31.796+0900
+2021-08-04T18:41:31.796+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVpcs Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 68
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=4c856481e047fc927faeafd40780978b9ca17e62e9e3b1cabd23dd60c53f684b
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeVpcs&Version=2016-11-15&VpcId.1=vpc-021ca8b43aea72509
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.796+0900
+2021-08-04T18:41:31.902+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVpcs Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1146
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: f5562835-b462-4a3d-a880-835ade48a3dd
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.902+0900
+2021-08-04T18:41:31.902+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeVpcsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>f5562835-b462-4a3d-a880-835ade48a3dd</requestId>
+    <vpcSet>
+        <item>
+            <vpcId>vpc-021ca8b43aea72509</vpcId>
+            <ownerId>740320335608</ownerId>
+            <state>available</state>
+            <cidrBlock>10.0.0.0/16</cidrBlock>
+            <cidrBlockAssociationSet>
+                <item>
+                    <cidrBlock>10.0.0.0/16</cidrBlock>
+                    <associationId>vpc-cidr-assoc-02cccdee1b3be9992</associationId>
+                    <cidrBlockState>
+                        <state>associated</state>
+                    </cidrBlockState>
+                </item>
+            </cidrBlockAssociationSet>
+            <dhcpOptionsId>dopt-2700414c</dhcpOptionsId>
+            <tagSet>
+                <item>
+                    <key>Name</key>
+                    <value>production</value>
+                </item>
+            </tagSet>
+            <instanceTenancy>default</instanceTenancy>
+            <isDefault>false</isDefault>
+        </item>
+    </vpcSet>
+</DescribeVpcsResponse>: timestamp=2021-08-04T18:41:31.902+0900
+2021-08-04T18:41:31.902+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] Setting Security Group IDs: []string{"sg-0622dd5baba7979c6"}: timestamp=2021-08-04T18:41:31.902+0900
+2021-08-04T18:41:31.902+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:31 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeInstanceAttribute Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 126
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=b7e889a7e31f52793b22395cd19331ee7498729e1683995a330e907d2bf21ba5
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094131Z
+Accept-Encoding: gzip
+
+Action=DescribeInstanceAttribute&Attribute=instanceInitiatedShutdownBehavior&InstanceId=i-00a078d6f615df895&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:31.902+0900
+2021-08-04T18:41:32.034+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeInstanceAttribute Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 382
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:31 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 11bc1a50-193e-4100-8469-34064b4c479c
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.034+0900
+2021-08-04T18:41:32.034+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstanceAttributeResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>11bc1a50-193e-4100-8469-34064b4c479c</requestId>
+    <instanceId>i-00a078d6f615df895</instanceId>
+    <instanceInitiatedShutdownBehavior>
+        <value>stop</value>
+    </instanceInitiatedShutdownBehavior>
+</DescribeInstanceAttributeResponse>: timestamp=2021-08-04T18:41:32.034+0900
+2021-08-04T18:41:32.035+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeVolumes Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 74
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=94efba778df66e0c41bb235a857ace91afc8f395a4238ce4dba3d4071dc601cf
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094132Z
+Accept-Encoding: gzip
+
+Action=DescribeVolumes&Version=2016-11-15&VolumeId.1=vol-023f162babb96674e
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.035+0900
+2021-08-04T18:41:32.148+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeVolumes Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 1206
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:32 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 26a664c8-4588-4373-bdee-f54fea680aa2
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.148+0900
+2021-08-04T18:41:32.149+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeVolumesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>26a664c8-4588-4373-bdee-f54fea680aa2</requestId>
+    <volumeSet>
+        <item>
+            <volumeId>vol-023f162babb96674e</volumeId>
+            <size>8</size>
+            <snapshotId>snap-0686680c8efb82da8</snapshotId>
+            <availabilityZone>ap-northeast-2a</availabilityZone>
+            <status>in-use</status>
+            <createTime>2021-08-04T06:15:21.191Z</createTime>
+            <attachmentSet>
+                <item>
+                    <volumeId>vol-023f162babb96674e</volumeId>
+                    <instanceId>i-00a078d6f615df895</instanceId>
+                    <device>/dev/sda1</device>
+                    <status>attached</status>
+                    <attachTime>2021-08-04T06:15:21.000Z</attachTime>
+                    <deleteOnTermination>true</deleteOnTermination>
+                </item>
+            </attachmentSet>
+            <volumeType>gp2</volumeType>
+            <iops>100</iops>
+            <encrypted>false</encrypted>
+            <multiAttachEnabled>false</multiAttachEnabled>
+        </item>
+    </volumeSet>
+</DescribeVolumesResponse>: timestamp=2021-08-04T18:41:32.148+0900
+2021-08-04T18:41:32.149+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeInstanceAttribute Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 114
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=cae3263402030c203e46d66c6d5ec071205ffa2f6ce24e2350bd1e074c6cbf09
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094132Z
+Accept-Encoding: gzip
+
+Action=DescribeInstanceAttribute&Attribute=disableApiTermination&InstanceId=i-00a078d6f615df895&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.149+0900
+2021-08-04T18:41:32.283+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeInstanceAttribute Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 359
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:32 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 278ad53e-e721-4b41-bbca-ee50f185baf6
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.283+0900
+2021-08-04T18:41:32.283+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstanceAttributeResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>278ad53e-e721-4b41-bbca-ee50f185baf6</requestId>
+    <instanceId>i-00a078d6f615df895</instanceId>
+    <disableApiTermination>
+        <value>false</value>
+    </disableApiTermination>
+</DescribeInstanceAttributeResponse>: timestamp=2021-08-04T18:41:32.283+0900
+2021-08-04T18:41:32.283+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeInstanceAttribute Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 101
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=bef49f32faedc9b1e25de407009c9ea3e1cdd3e66cb3851f423bcb23a64b673c
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094132Z
+Accept-Encoding: gzip
+
+Action=DescribeInstanceAttribute&Attribute=userData&InstanceId=i-00a078d6f615df895&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.283+0900
+2021-08-04T18:41:32.408+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeInstanceAttribute Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 552
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:32 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 2dc1d26f-3145-4312-8259-0fd3a19e8d82
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.408+0900
+2021-08-04T18:41:32.408+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstanceAttributeResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>2dc1d26f-3145-4312-8259-0fd3a19e8d82</requestId>
+    <instanceId>i-00a078d6f615df895</instanceId>
+    <userData>
+        <value>IyEvYmluL2Jhc2gNCnN1ZG8gYXB0IHVwZGF0ZSAteQ0Kc3VkbyBhcHQgaW5zdGFsbCBhcGFoY2UyIC15DQpzdWRvIHN5c3RlbWN0bCBzdGFydCBhcGFjaGUyDQpzdWRvIGJhc2ggLWMgJ2VjaG8geW91ciB2ZXJ5IGZpcnN0IHdlYiBzZXJ2ZXIgPiAvdmFyL3d3dy9odG1sL2luZGV4Lmh0bWwnDQo=</value>
+    </userData>
+</DescribeInstanceAttributeResponse>: timestamp=2021-08-04T18:41:32.408+0900
+2021-08-04T18:41:32.409+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeInstanceCreditSpecifications Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 95
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=49b4d3755b158e0a432a4519beb4f10e0c651778d363f4eb95de024ca4de6e1f
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094132Z
+Accept-Encoding: gzip
+
+Action=DescribeInstanceCreditSpecifications&InstanceId.1=i-00a078d6f615df895&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.409+0900
+2021-08-04T18:41:32.502+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeInstanceCreditSpecifications Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:32 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: c49668c1-4003-4d5b-9241-dad8bd1719af
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.502+0900
+2021-08-04T18:41:32.502+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstanceCreditSpecificationsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>c49668c1-4003-4d5b-9241-dad8bd1719af</requestId>
+    <instanceCreditSpecificationSet>
+        <item>
+            <cpuCredits>standard</cpuCredits>
+            <instanceId>i-00a078d6f615df895</instanceId>
+        </item>
+    </instanceCreditSpecificationSet>
+</DescribeInstanceCreditSpecificationsResponse>: timestamp=2021-08-04T18:41:32.502+0900
+2021-08-04T18:41:32.504+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-08-04T18:41:32.504+0900
+2021-08-04T18:41:32.508+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeTags Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.ap-northeast-2.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.0.3 (+https://www.terraform.io) terraform-provider-aws/3.52.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.40.9 (go1.16; windows; amd64)
+Content-Length: 165
+Authorization: AWS4-HMAC-SHA256 Credential=AKIA2YXUH234PKJDNZQP/20210804/ap-northeast-2/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=34d373c8bc274c26c652dd264e2e3a6fcea589fc280f8e0e71690528d5fe1ee8
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210804T094132Z
+Accept-Encoding: gzip
+
+Action=DescribeTags&Filter.1.Name=resource-id&Filter.1.Value.1=i-00a078d6f615df895&Filter.2.Name=key&Filter.2.Value.1=aws%3Aec2launchtemplate%3Aid&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.508+0900
+2021-08-04T18:41:32.604+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeTags Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 212
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Wed, 04 Aug 2021 09:41:32 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 33f3e7e8-db58-4bcb-bf2e-30c4468d64da
+
+
+-----------------------------------------------------: timestamp=2021-08-04T18:41:32.604+0900
+2021-08-04T18:41:32.604+0900 [INFO]  provider.terraform-provider-aws_v3.52.0_x5.exe: 2021/08/04 18:41:32 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeTagsResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>33f3e7e8-db58-4bcb-bf2e-30c4468d64da</requestId>
+    <tagSet/>
+</DescribeTagsResponse>: timestamp=2021-08-04T18:41:32.604+0900
+2021-08-04T18:41:32.605+0900 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.web-server-instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+2021-08-04T18:41:32.606+0900 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-08-04T18:41:32.627+0900 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.52.0/windows_amd64/terraform-provider-aws_v3.52.0_x5.exe pid=12976
+2021-08-04T18:41:32.627+0900 [DEBUG] provider: plugin exited
+2021-08-04T18:41:32.627+0900 [INFO]  backend/local: plan operation completed
